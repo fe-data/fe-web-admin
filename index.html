@@ -8,7 +8,7 @@
   <meta name="referrer" content="origin">
 
   <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="fe_admin">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
@@ -19,52 +19,40 @@
   <title>fe_admin</title>
   <link rel="manifest" href="manifest.json">
 
-  <script>
-    // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "84701379";
-  </script>
-
   <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
-  <script src="https://unpkg.com/@zxing/library@0.20.0" type="application/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/build/pdf.min.js" type="text/javascript"></script>
-  <script type="text/javascript">
-  pdfjsLib.GlobalWorkerOptions.workerSrc =
-    "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/build/pdf.worker.min.js";
-  pdfRenderOptions = {
-    // where cmaps are downloaded from
-    cMapUrl: "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.9.179/cmaps/",
-    // The cmaps are compressed in the case
-    cMapPacked: true,
-    // any other options for pdfjsLib.getDocument.
-    // params: {}
-  };
-</script>
-  <!-- This script adds the flutter initialization JS code -->
+  <script src="https://cdn.jsdelivr.net/npm/@zxing/library@0.21.3/umd/index.min.js"></script>
   <script src="qrcode_reader.js" defer></script>
-  <script src="flutter.js" defer></script>
+
 </head>
 <body>
+  <script src='https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.min.mjs' type='module'></script>
+  <script type='module'>
+  var { pdfjsLib } = globalThis;
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.worker.mjs';
+
+  var pdfRenderOptions = {
+    cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/cmaps/',
+    cMapPacked: true,
+  }
+  </script>
   <div id="loading" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:100vh;"></div>
-  <script>
+  <script type="text/javascript">
     window.addEventListener('load', function(ev) {
       var loading = document.querySelector('#loading');
       loading.textContent = "Loading entrypoint...";
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
+      _flutter.loader.load({
+        onEntrypointLoaded: async function(engineInitializer) {
           loading.textContent = "Initializing engine...";
-          engineInitializer.initializeEngine({
+          const appRunner = await engineInitializer.initializeEngine({
             canvasKitVariant: "full",
             renderer: "canvaskit"
-          }).then(function(appRunner) {
-            loading.textContent = "Running app...";
-            appRunner.runApp();
           });
+          loading.textContent = "Running app...";
+          await appRunner.runApp();
         }
       });
     });
   </script>
+  <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
