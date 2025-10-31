@@ -1,11 +1,11 @@
 {
-    "name": "fe_admin",
+    "name": "FE Admin",
     "short_name": "fe_admin",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Admin app for the Fast Events WordPress plugin.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
