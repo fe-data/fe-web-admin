@@ -555,6 +555,7 @@
   "installTxt": "Instead of using the browser, use the native FE Admin App.\n\nClick below to install or open.",
   "key": "Key",
   "layoutEmail": "Order emailaddress",
+  "layoutMax6": "Select up to 6 fields",
   "layoutName": "Order name",
   "layoutOrderId": "Order number",
   "level": "Level",

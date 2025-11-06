@@ -553,6 +553,7 @@
   "installTxt": "Gebruik de FE Admin App in plaats van de browser.\n\nKlik hieronder om te installeren of te openen.",
   "key": "Sleutel",
   "layoutEmail": "Order emailadres",
+  "layoutMax6": "Selecteer maximaal 6 velden",
   "layoutName": "Order naam",
   "layoutOrderId": "Order nummer",
   "level": "Level",
