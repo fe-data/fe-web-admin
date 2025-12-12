@@ -17,7 +17,7 @@ async function detectQrcode(byteData) {
         if (result) {
             return resolve('{"result": "' + result.data + '", "error": "0"}');
         } else {
-            return resolve('{"result": "", "error": "1"}');
+            return resolve('{"result": "", "error": "2"}');
         }
       }
       img.src = url;

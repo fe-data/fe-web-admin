@@ -1,8 +1,9 @@
 {
     "name": "FE Admin",
-    "short_name": "fe_admin",
+    "short_name": "FE-Admin",
     "start_url": ".",
     "display": "standalone",
+    "categories": ["productivity", "utilities"],
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
     "description": "Admin app for the Fast Events WordPress plugin.",
