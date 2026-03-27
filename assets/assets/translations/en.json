@@ -332,7 +332,7 @@
     },
     "delete": "Delete email list from event #{}?",
     "deleted": "Email list from event #{} deleted",
-    "empty": "No email list selected",
+    "empty": "No event selected",
     "header": "Header present",
     "help": "Upload a CSV file where each line consists of a name, email address and number. The three fields should be separated by a semicolon (;).\n\nA CSV file can be created with Excel and save it specifically as a CSV file.\n\nThe files can be used in the group setting of an event's basic settings. Only people with the email address in the file can place an order up to a maximum specified in the 'number' field of the file.",
     "noSelection": "No email list selected",

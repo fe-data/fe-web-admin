@@ -333,7 +333,7 @@
     },
     "delete": "Email lijst van evenement #{} verwijderen?",
     "deleted": "Email lijst van evenement #{} verwijderd",
-    "empty": "Geen email lijst geselecteerd",
+    "empty": "Geen event geselecteerd",
     "header": "Koptekst aanwezig",
     "help": "Upload een CSV-bestand waarbij elke regel bestaat uit een naam, emailadres en aantal. De drie velden dienen gescheiden tezijn door een puntkomma (;).\n\nEen CSV-bestand kan worden gemaak met Excel en het specifiek op te slaan als CSV-bestand.\n\nDe bestanden kunnen worden gebruikt in de groep-instelling van de basis instellingen van een evenement. Alleen mensen met het emailadres in het bestand kunnen een bestelling plaatsen tot een maximum dat is gespecificieerd in het 'aantal' veld van het bestand.",
     "noSelection": "Geen email lijst geselecteerd",
